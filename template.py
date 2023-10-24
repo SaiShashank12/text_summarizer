@@ -24,7 +24,7 @@ list_of_files=[
     "Dockerfile",
     "requirements.txt",
     "setup.py",
-    "reseach/trail.ipynb"
+    "reseach/trail.ipynb",
 ]
 
 
