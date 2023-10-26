@@ -522,3 +522,129 @@ x==========x]
 [2023-10-25 18:01:17,556: INFO: common: yaml file: params.yaml loaded successfully]
 [2023-10-25 18:01:17,558: INFO: common: created directory at: artifacts]
 [2023-10-25 18:01:17,559: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-10-25 18:17:09,806: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-25 18:17:09,811: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-25 18:17:09,813: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-25 18:17:09,814: INFO: common: created directory at: artifacts]
+[2023-10-25 18:17:09,815: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-25 18:17:09,815: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2023-10-25 18:17:09,925: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-25 18:17:09,925: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-25 18:17:09,929: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-25 18:17:09,931: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-25 18:17:09,932: INFO: common: created directory at: artifacts]
+[2023-10-25 18:17:09,933: INFO: common: created directory at: artifacts/data_validation]
+[2023-10-25 18:17:09,937: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-25 18:17:09,937: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-25 18:17:09,941: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-25 18:17:09,943: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-25 18:17:09,943: INFO: common: created directory at: artifacts]
+[2023-10-25 18:17:09,944: INFO: common: created directory at: artifacts/data_transformation]
+[2023-10-25 18:17:11,524: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-25 18:17:11,525: INFO: main: *******************]
+[2023-10-25 18:17:11,525: INFO: main: >>>>>> stage Model Evaluation stage started <<<<<<]
+[2023-10-25 18:17:11,528: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-25 18:17:11,530: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-25 18:17:11,531: INFO: common: created directory at: artifacts]
+[2023-10-25 18:17:11,531: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-10-25 18:17:11,532: ERROR: main: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.]
+Traceback (most recent call last):
+  File "main.py", line 58, in <module>
+    model_evaluation.main()
+  File "c:\users\shash\text_summarizer\src\text_summarizer\pipeline\stage_05_model_evaluation.py", line 14, in main
+    model_evaluation_config.evaluate()
+  File "c:\users\shash\text_summarizer\src\text_summarizer\components\model_evaluation.py", line 57, in evaluate
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 701, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 534, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\transformers\utils\hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\huggingface_hub\utils\_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\huggingface_hub\utils\_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+[2023-10-25 18:17:28,181: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-10-25 18:17:28,184: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-25 18:17:28,185: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-25 18:17:28,186: INFO: common: created directory at: artifacts]
+[2023-10-25 18:17:28,187: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-10-25 18:17:30,013: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: AAD2:0CFE:18701E:1D4630:6539B884
+Accept-Ranges: bytes
+Date: Thu, 26 Oct 2023 01:17:29 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bur-kbur8200056-BUR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1698283049.227091,VS0,VE168
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 0405a3ef460639478bc5a6e5526b31aa74ba937b
+Expires: Thu, 26 Oct 2023 01:22:29 GMT
+Source-Age: 0
+
+]
+[2023-10-25 18:17:30,137: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2023-10-25 18:17:30,137: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2023-10-25 18:17:30,141: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-25 18:17:30,142: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-25 18:17:30,143: INFO: common: created directory at: artifacts]
+[2023-10-25 18:17:30,143: INFO: common: created directory at: artifacts/data_validation]
+[2023-10-25 18:17:30,146: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2023-10-25 18:17:30,146: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2023-10-25 18:17:30,149: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-25 18:17:30,151: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-25 18:17:30,151: INFO: common: created directory at: artifacts]
+[2023-10-25 18:17:30,152: INFO: common: created directory at: artifacts/data_transformation]
+[2023-10-25 18:17:33,689: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2023-10-25 18:17:33,690: INFO: main: *******************]
+[2023-10-25 18:17:33,690: INFO: main: >>>>>> stage Model Evaluation stage started <<<<<<]
+[2023-10-25 18:17:33,694: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-10-25 18:17:33,697: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-10-25 18:17:33,698: INFO: common: created directory at: artifacts]
+[2023-10-25 18:17:33,699: INFO: common: created directory at: artifacts/model_evaluation]
+[2023-10-25 18:17:33,699: ERROR: main: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.]
+Traceback (most recent call last):
+  File "main.py", line 58, in <module>
+    model_evaluation.main()
+  File "c:\users\shash\text_summarizer\src\text_summarizer\pipeline\stage_05_model_evaluation.py", line 14, in main
+    model_evaluation_config.evaluate()
+  File "c:\users\shash\text_summarizer\src\text_summarizer\components\model_evaluation.py", line 57, in evaluate
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 701, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 534, in get_tokenizer_config
+    resolved_config_file = cached_file(
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\transformers\utils\hub.py", line 429, in cached_file
+    resolved_file = hf_hub_download(
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\huggingface_hub\utils\_validators.py", line 110, in _inner_fn
+    validate_repo_id(arg_value)
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\huggingface_hub\utils\_validators.py", line 158, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.utils._validators.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
