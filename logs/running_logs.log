@@ -683,3 +683,15 @@ x==========x]
 [2023-10-25 18:34:17,429: INFO: common: yaml file: params.yaml loaded successfully]
 [2023-10-25 18:34:17,430: INFO: common: created directory at: artifacts]
 [2023-10-25 18:34:17,430: INFO: common: created directory at: artifacts/model_trainer]
+[2023-10-25 18:34:48,208: INFO: server: Shutting down]
+[2023-10-25 18:34:48,321: INFO: server: Waiting for connections to close. (CTRL+C to force quit)]
+[2023-10-25 20:10:15,099: INFO: server: Finished server process [25076]]
+[2023-10-25 20:10:15,137: ERROR: on: Traceback (most recent call last):
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\starlette\routing.py", line 638, in lifespan
+    await receive()
+  File "C:\Users\shash\anaconda3\envs\textS\lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+  File "C:\Users\shash\anaconda3\envs\textS\lib\asyncio\queues.py", line 163, in get
+    await getter
+asyncio.exceptions.CancelledError
+]
